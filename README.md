@@ -48,21 +48,39 @@ console.log(s.length);
 console.log(s.toLocaleUpperCase());
 
 // Arrays - variavles holds multiple values
+
 // you can add diffrent type of data type in array with JS
+
 const fruits = ["apples", "oranges", "pears", 10, true];
+
 console.log(fruits);
+
 // to access something inside array we do this
+
 console.log(fruits[2]);
+
 // to added into the array we:
+
 fruits[5] = "Ahmed";
+
 // the best way to added into the array is to use push
+
 fruits.push("Software");
+
 // if you want to add into the beginning of the arry we use unshift
+
 fruits.unshift("Hello World!");
+
 // to remove the list item from the array we use pop
+
 fruits.pop();
+
 // to check if something is in the array we use Array.isArray(.....)
+
 console.log(Array.isArray(fruits));
+
 // to get the index of array we use indexOf
+
 console.log(fruits.indexOf("Ahmed"));
+
 console.log(fruits);
