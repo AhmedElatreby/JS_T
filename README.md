@@ -2,23 +2,23 @@
 
 # This is from the YouTube crash course Traversy Media.
 
-# var, let const
+### var, let const
 
-# var is used globely
+### var is used globely
 
-# let is used to declare varable, and can be changed
+#### let is used to declare varable, and can be changed
 
 let age = 30;
 age = 40;
 console.log(age);
 
-# const is used to declear varable and cannot be changed
+### const is used to declear varable and cannot be changed
 
 const name = "Smith";
 name = "Mark"; # you can not change the varable
 console.log(name);
 
-# alwayes use const unless you going to reassign the value
+## alwayes use const unless you going to reassign the value
 
 # Data type
 
@@ -37,17 +37,17 @@ const x = null;
 const y = undefined;
 let z;
 
-# to test the data type you use typeof
+##### to test the data type you use typeof
 
 console.log(typeof rating);
 
-# Concatenation
+### Concatenation
 
 const name = "Ahmed";
 const age = 40;
 console.log(`my name is ${name} and I am ${age} `);
 
-# to count the number of letter
+#### to count the number of letter
 
 const s = "Hello World!";
 console.log(s.length);
@@ -55,42 +55,44 @@ console.log(s.toLocaleUpperCase());
 
 # Arrays - variavles holds multiple values
 
-# you can add diffrent type of data type in array with JS
+#### you can add diffrent type of data type in array with JS
 
 const fruits = ["apples", "oranges", "pears", 10, true];
 console.log(fruits);
 
-# to access something inside array we do this
+#### to access something inside array we do this
 
 console.log(fruits[2]);
 
-# to added into the array we:
+#### to added into the array we:
 
 fruits[5] = "Ahmed";
 
-# the best way to added into the array is to use push
+#### the best way to added into the array is to use push
 
 fruits.push("Software");
 
-# if you want to add into the beginning of the arry we use unshift
+#### if you want to add into the beginning of the arry we use unshift
 
 fruits.unshift("Hello World!");
 
-# to remove the list item from the array we use pop
+#### to remove the list item from the array we use pop
 
 fruits.pop();
 
-# to check if something is in the array we use Array.isArray(.....)
+#### to check if something is in the array we use Array.isArray(.....)
 
 console.log(Array.isArray(fruits));
 
-# to get the index of array we use indexOf
+### to get the index of array we use indexOf
 
 console.log(fruits.indexOf("Ahmed"));
 
 console.log(fruits);
 
-# The object literal is one of the most popular patterns for creating objects in JavaScript because of its simplicity. ES6 makes the object literal more succinct and powerful by extending the syntax in some ways.
+```
+The object literal is one of the most popular patterns for creating objects in JavaScript because of its simplicity. ES6 makes the object literal more succinct and powerful by extending the syntax in some ways.
+```
 
 const person = {
 firstName: "Ahmed",
@@ -104,7 +106,7 @@ county: "Somewhere",
 },
 };
 
-# you can add into the object
+- you can add into the object
 
 person.email = "ahmed@email.com";
 console.log(person);
@@ -121,7 +123,7 @@ adress: { county },
 } = person;
 console.log(county);
 
-# creating todos list
+## creating todos list
 
 const todos = [
 {
@@ -143,26 +145,26 @@ isCompleted: false,
 
 console.log(todos[1].text);
 
-# use the previous example to convert into JSON
+- use the previous example to convert into JSON
 
 const todoJSON = JSON.stringify(todos); // .stringify is used to conver the object to JSON
 console.log(todoJSON);
 
 # using For loop
 
-# create for loop to print numbers from 0 to 10
+- create for loop to print numbers from 0 to 10
 
 for (let i = 0; i <= 10; i++) {
 console.log(`For Loop Number: ${i}`);
 }
 
-# using For loop with an array
+- using For loop with an array
 
 for (let i = 0; i < todos.length; i++) {
 console.log(`to do list: ${todos[i].text}`); // todos, than array[i] followed by . than the object name
 }
 
-# there is anothor way to use foor loop to display the same content is (for of loop)
+- there is anothor way to use foor loop to display the same content is (for of loop)
 
 for (let todo of todos) {
 console.log(`Today todo list is: ${todo.text}`);
@@ -202,7 +204,7 @@ console.log(`Today todos list is: ${todaoText}`);
   console.log(`Today todos list is: ${todoCompleted}`);
   console.log(todoCompleted);
 
-# While Loop
+## While Loop
 
 let i = 0;
 while (i < 10) {
