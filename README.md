@@ -94,21 +94,11 @@ console.log(fruits);
 The object literal is one of the most popular patterns for creating objects in JavaScript because of its simplicity. ES6 makes the object literal more succinct and powerful by extending the syntax in some ways.
 ```
 
-const person = {
-firstName: "Ahmed",
-lastName: "Ahmed",
-age: 40,
-hobbies: ["fitness", "fishing", "crossfit"],
-adress: {
-street: "123 street",
-city: "London",
-county: "Somewhere",
-},
-};
+`const person = { firstName: "Ahmed", lastName: "Ahmed", age: 40, hobbies: ["fitness", "fishing", "crossfit"], adress: { street: "123 street", city: "London", county: "Somewhere", }, };`
 
 - you can add into the object
 
-person.email = "ahmed@email.com";
+`person.email = "ahmed@email.com";
 console.log(person);
 
 console.log(person);
@@ -121,54 +111,31 @@ firstName,
 lastName,
 adress: { county },
 } = person;
-console.log(county);
+console.log(county);`
 
 ## creating todos list
 
-const todos = [
-{
-id: 1,
-text: "Take out the rubbish",
-isCompleted: true,
-},
-{
-id: 2,
-text: "Take the kids out",
-isCompleted: true,
-},
-{
-id: 3,
-text: "do my homework",
-isCompleted: false,
-},
-];
+`const todos = [ { id: 1, text: "Take out the rubbish", isCompleted: true, }, { id: 2, text: "Take the kids out", isCompleted: true, }, { id: 3, text: "do my homework", isCompleted: false, }, ];`
 
 console.log(todos[1].text);
 
 - use the previous example to convert into JSON
 
-const todoJSON = JSON.stringify(todos); // .stringify is used to conver the object to JSON
-console.log(todoJSON);
+`const todoJSON = JSON.stringify(todos); // .stringify is used to conver the object to JSON console.log(todoJSON);`
 
 # using For loop
 
 - create for loop to print numbers from 0 to 10
 
-for (let i = 0; i <= 10; i++) {
-console.log(`For Loop Number: ${i}`);
-}
+`for (let i = 0; i <= 10; i++) { console.log(`For Loop Number: ${i}`); }`
 
 - using For loop with an array
 
-for (let i = 0; i < todos.length; i++) {
-console.log(`to do list: ${todos[i].text}`); // todos, than array[i] followed by . than the object name
-}
+`for (let i = 0; i < todos.length; i++) { console.log(`to do list: ${todos[i].text}`); // todos, than array[i] followed by . than the object name }`
 
 - there is anothor way to use foor loop to display the same content is (for of loop)
 
-for (let todo of todos) {
-console.log(`Today todo list is: ${todo.text}`);
-}
+`for (let todo of todos) { console.log(`Today todo list is: ${todo.text}`); }`
 
 # Higher-Order Functions
 
@@ -179,35 +146,18 @@ A “higher-order function” is a function that accepts functions as parameters
 - Array Method .forEach()
   The .forEach() method executes a callback function on each of the elements in an array in order.
 
-todos.forEach(function (todo) {
-console.log(`Today todos list is: ${todo.text}`);
-});
+`todos.forEach(function (todo) { console.log(`Today todos list is: ${todo.text}`); });`
 
 - Array Method .map()
   The .map() method executes a callback function on each element in an array. It returns a new array made up of the return values from the callback function.
 
-const todaoText = todos.map(function (todo) {
-return todo.text;
-});
-console.log(`Today todos list is: ${todaoText}`);
+`const todaoText = todos.map(function (todo) { return todo.text; }); console.log(`Today todos list is: ${todaoText}`);`
 
 - Array Method .filter()
   The .filter() method executes a callback function on each element in an array. The callback function for each of the elements must return either true or false. The returned array is a new array with any elements for which the callback function returns true.
 
-  const todoCompleted = todos
-  .filter(function (todo) {
-  return todo.isCompleted == true;
-  })
-  .map(function (todo) {
-  return todo.text;
-  }); // you can add for map into the filter loop to get more information
-  console.log(`Today todos list is: ${todoCompleted}`);
-  console.log(todoCompleted);
+  `const todoCompleted = todos .filter(function (todo) { return todo.isCompleted == true; }) .map(function (todo) { return todo.text; }); // you can add for map into the filter loop to get more information console.log(`Today todos list is: ${todoCompleted}`); console.log(todoCompleted);`
 
 ## While Loop
 
-let i = 0;
-while (i < 10) {
-console.log(`While Loop Number: ${i}`);
-i++;
-}
+`let i = 0; while (i < 10) { console.log(`While Loop Number: ${i}`); i++; }`
