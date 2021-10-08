@@ -158,6 +158,104 @@ A “higher-order function” is a function that accepts functions as parameters
 
   `const todoCompleted = todos .filter(function (todo) { return todo.isCompleted == true; }) .map(function (todo) { return todo.text; }); // you can add for map into the filter loop to get more information console.log(`Today todos list is: ${todoCompleted}`); console.log(todoCompleted);`
 
-## While Loop
+### While Loop
 
 `let i = 0; while (i < 10) { console.log(`While Loop Number: ${i}`); i++; }`
+
+- Higher-Order
+
+array method const todoCompleted = todos .filter(function (todo) { return todo.isCompleted == true; }) .map(function (todo) { return todo.text; }); // you can add for map into the filter loop to get more information console.log(`Today todos list is: ${todoCompleted}`); console.log(todoCompleted); `
+
+### using if and if else
+
+`const x = 1;
+
+if (x == 10) {
+console.log("x is 10");
+} else if (x > 10) {
+console.log("x is greater than 10");
+} else {
+console.log("x is less than 10");
+}`
+
+#### using || OR
+
+`const x = 11; const y = 10; if (x > 5 || y > 10) { console.log("x is more than 5 or y is more than 10"); }`
+
+#### using && AND
+
+`const x = 6; const y = 11; if (x > 5 && y > 10) { console.log("x is more than 5 or y is more than 10"); }`
+
+### Ternary Operator
+
+- ? means than
+- : means else
+
+`const x = 11; const color = x > 10 ? 'red' : 'blue'; console.log(color); // will be red`
+
+### Switches
+
+- Switches is user to evaluate cases
+- we use break with switch
+- use default as well
+  `
+  const x = 12;
+  const color = x > 10 ? "red" : "blue";
+
+switch (color) {
+case "red":
+console.log("color is red");
+break;
+case "blue":
+console.log("color is blue");
+break;
+default:
+console.log("color is NOT red or blue");
+break;
+}
+`
+
+### Functions
+
+` function addNums(num1, num2) { console.log(num1 + num2); } addNums(5, 4);`
+
+#### There is way to use function
+
+`const addNums = (num1, num2) => num1 + num2;
+
+console.log(addNums(5, 5));`
+
+### OOP
+
+- Constructor function
+  ` function Person(firstName, LastNmae, dob) {
+- class name needs to be capital letter
+  this.firstName = firstName;
+  this.LastNmae = LastNmae;
+  this.dob = new Date(dob);
+
+  - use the Data class to transfer the dob from str to date - you can create a function inside the constructor as well
+    this.getBirthYear = function () {
+    return this.dob.getFullYear`${this.firstName} ${this.LastNmae}`;
+    };
+    this.getFullName = function () {
+    return `${this.firstName} ${this.LastNmae}`;
+    };
+    this.fullDetails = function () {
+    return `${this.firstName} ${this.LastNmae} ${this.dob}`;
+    };
+    }
+
+- Instantiate object
+  const person1 = new Person("Ahmed", "Smith", "10-05-1981");
+- create a person object
+  const person2 = new Person("Mo", "Smith", "1-04-1991");
+
+console.log(person1);
+console.log(person1.firstName, person1.LastNmae);
+console.log(person2);
+console.log(person1.getBirthYear());
+console.log(person2.getFullName());
+console.log(person2.fullDetails());
+console.log(person1.fullDetails());
+`
